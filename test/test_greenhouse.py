@@ -12,5 +12,5 @@ class TestGreenhouse(TestCase):
     @patch.object(Seesaw, 'moisture_read')
     def test_measure_soil_moisture_valid_range(self, mock_moisture_read):
         mock_moisture_read.return_value = 300
-        gh= Greenhouse()
-        self.assertEqual(gh.measure_soil_moisture(), 300)
+        gn= Greenhouse()
+        self.assertEqual(gn.measure_soil_moisture, 300)

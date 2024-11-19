@@ -13,4 +13,5 @@ class TestGreenhouse(TestCase):
     def test_measure_soil_moisture_valid_range(self, mock_moisture_read):
         mock_moisture_read.return_value = 300
         gh= Greenhouse()
-        self.assertEqual(gh.measure_soil_moisture(), 300)om
+        self.assertEqual(gh.measure_soil_moisture(), 300)
+

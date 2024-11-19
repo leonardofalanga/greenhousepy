@@ -1,12 +1,3 @@
-try:
-    import RPi.GPIO as GPIO
-    import board
-    import adafruit_seesaw.seesaw as seesaw
-except:
-    import mock.GPIO as GPIO
-    import mock.board as board
-    import mock.seesaw as seesaw
-
 
 class Greenhouse:
 
@@ -27,8 +18,7 @@ class Greenhouse:
         self.red_light_on = False
 
     def measure_soil_moisture(self) -> int:
-        # To be implemented
-        pass
+        return self.soil_moisture_sensor.moisture_read()
 
     def turn_on_sprinkler(self) -> None:
         # To be implemented
@@ -49,8 +39,4 @@ class Greenhouse:
     def manage_lightbulb(self) -> None:
         # To be implemented
         pass
-
-
-class GreenhouseError(Exception):
-    pass
 
